@@ -64,6 +64,7 @@ function Login()
          <input onChange={handleChange} value={userdata.password} type="password" name="password" placeholder="Password" required></input>
          <button type="submit" className="waves-effect waves-light btn #64b5f6 blue darken-1">SignIn</button>
          <h5><Link to="/signup">Already have an account?</Link></h5>
+         <h5><Link to="/reset">Forgot Password?</Link></h5>
         </div>
         </div>     
         </form>

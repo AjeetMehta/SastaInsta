@@ -32,7 +32,7 @@ function CreatePost() {
         const url = data.url;
         const { title } = userPost;
         const token = localStorage.getItem("access_token");
-        const result = await fetch("http://localhost:5000/posts/create", {
+        const result = await fetch("http://localhost:5000/posts/create/" + id, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -45,7 +45,7 @@ function CreatePost() {
         if (data1.error)
           M.toast({ html: data1.error, classes: "#c62828 red darken-3" });
         else {
-          M.toast({ html: "Successfully createdPost" });
+          M.toast({ html: "Successfully Updated" });
           history.push("/");
         }
       });
@@ -61,7 +61,7 @@ function CreatePost() {
           textAlign: "center",
         }}
       >
-        <h3>CreatePost</h3>
+        <h3>EditPost</h3>
         <input
           name="title"
           type="text"
@@ -96,4 +96,4 @@ function CreatePost() {
   );
 }
 
-export default CreatePost;
+export default EditPost;
